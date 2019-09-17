@@ -1,0 +1,16 @@
+server {
+		listen 80;
+		listen [::]:80;
+		
+		root /home/sukhada/www/hw02.sukhadakhatu.space;
+		
+		index index2.html;
+		
+		server_name hw02.sukhadakhatu.space;
+		
+		location / {
+				# First attempt to serve request as file, then
+				# as directory, then fall back to displaying a 404.
+				try_files $uro $uri/ = 404;
+		}
+}
